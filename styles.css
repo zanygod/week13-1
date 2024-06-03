@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #2c3e50, #34495e, #2980b9, #8e44ad, #16a085);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+#quiz-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ddd;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#initial-screen, #summary-screen {
+    padding: 40px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#quiz-container {
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: #16a085;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: #34495e;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.option:hover {
+    background-color: #3b5998;
+    transform: scale(1.05);
+}
+
+.option.selected {
+    background-color: #2980b9;
+    border-color: #1abc9c;
+}
+
+.option.correct {
+    background-color: #27ae60;
+    border-color: #2ecc71;
+}
+
+.option.incorrect {
+    background-color: #c0392b;
+    border-color: #e74c3c;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+#score-container, #timer-container {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
